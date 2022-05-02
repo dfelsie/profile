@@ -20,31 +20,50 @@ import { Navbar } from "../components/Navbar";
 import MySection from "../components/MySection";
 import SectionBody from "../components/SectionBody";
 import TitleCard from "../components/TitleCard";
+import Head from "next/head";
 
 const sectionNames = ["About", "Skills", "Experience", "Contact"];
 
 const Index = () => (
-  <Flex flexDir={"column"} minH="100vh" pt={"15px"}>
-    {/* <Navbar>
-      <h1>I'm A header!</h1>
-    </Navbar> */}
-    <TitleCard />
-    <Flex flexGrow={9} flexDir={"column"} color="text" h={"90%"} w={"100%"}>
-      {sectionNames.map((name, index) => (
-        <MySection isBlack={index % 2 == 0} title={name}>
-          <SectionBody
-            isBlack={index % 2 == 0}
-            sectionTitle={name}
-          ></SectionBody>
-        </MySection>
-      ))}
+  <>
+    <Head>
+      <title>Profile for Daniel Felsenthal</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="theme-color" content="#ffffff" />
+    </Head>
+    <Flex flexDir={"column"} minH="100vh" pt={"15px"}>
+      <TitleCard />
+      <Flex flexGrow={9} flexDir={"column"} color="text" h={"90%"} w={"100%"}>
+        {sectionNames.map((name, index) => (
+          <MySection isBlack={index % 2 == 0} title={name}>
+            <SectionBody
+              isBlack={index % 2 == 0}
+              sectionTitle={name}
+            ></SectionBody>
+          </MySection>
+        ))}
+      </Flex>
     </Flex>
-
-    {/* <Footer>
-      <h1>I'm A Footer!</h1>
-    </Footer> 
-     <CTA /> */}
-  </Flex>
+  </>
 );
 
 export default Index;

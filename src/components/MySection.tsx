@@ -7,7 +7,6 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
-import arrow from "../../public/fatarrow.png";
 import Image from "next/image";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 
