@@ -35,6 +35,7 @@ export default function ExpandingDetailCard({
       border="3px solid black"
       borderRadius={"20px"}
       pl={"5%"}
+      onClick={() => setVisible(!visible)}
     >
       <Flex justifyContent={"space-between"}>
         <Text>{title}</Text>

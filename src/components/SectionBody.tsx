@@ -11,10 +11,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import ExpandingDetailCardWithDate from "./ExpandingDetailCardWithDate";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import ExpandingDetailCard from "./ExpandingDetailsCard";
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   sectionTitle: string;
@@ -172,30 +172,92 @@ export default function SectionBody({ sectionTitle, isBlack }: Props) {
         </>
       );
       break;
+
+    case "Projects":
+      body = (
+        <>
+          <Center>
+            <List>
+              <ListItem mb={"75px"}>
+                <ExpandingDetailCard title="Quicksort Visualization">
+                  <Text>
+                    An animated visualization of the quicksort algorithm using
+                    React, TypeScript, and Framer-Motion.
+                    <br></br>
+                    Vercel Live Link:{" "}
+                    <a href="https://framer-algo-3yhl979xw-dfelsie.vercel.app/">
+                      Here
+                    </a>
+                    <br></br>
+                    Github Link:{" "}
+                    <a href="https://github.com/dfelsie/framer-algo">Here</a>
+                  </Text>
+                </ExpandingDetailCard>
+              </ListItem>
+              <ListItem>
+                <ExpandingDetailCard title="Profile">
+                  <Text>
+                    The profile you're currently viewing.
+                    <br></br>
+                    Github Link:{" "}
+                    <a href="https://github.com/dfelsie/profile">Here</a>
+                  </Text>
+                </ExpandingDetailCard>
+              </ListItem>
+            </List>
+          </Center>
+        </>
+      );
+      break;
     case "Contact":
       body = (
         <>
           <Center id="contact" flexDir={"column"}>
-            <Flex mb="25px" fontSize={isLargerThan960 ? "2vw" : "42px"}>
-              <div>
-                <FontAwesomeIcon icon={faLinkedin} />
-              </div>
-              Linkedin:
-              <Text color={"blue"}>
-                <a
-                  color="blue"
-                  href="https://www.linkedin.com/in/daniel-felsenthal-697797213"
-                >
-                  Click here
-                </a>
-              </Text>
-            </Flex>
-            <Flex mb="25px" fontSize={isLargerThan960 ? "2vw" : "28px"}>
-              <div>
-                <FontAwesomeIcon icon={faEnvelope} />
-              </div>
-              <Text>Email: dfelsenthal88@gmail.com</Text>
-            </Flex>
+            <List>
+              <ListItem>
+                <Flex mb="25px" fontSize={isLargerThan960 ? "60px" : "42px"}>
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    height={"75px"}
+                    style={{ marginRight: "45px" }}
+                  />
+                  <Text color={"white"}>
+                    Linkedin:{" "}
+                    <a
+                      color="white"
+                      href="https://www.linkedin.com/in/daniel-felsenthal-697797213"
+                    >
+                      Click here
+                    </a>
+                  </Text>
+                </Flex>
+              </ListItem>
+              <ListItem>
+                <Flex mb="25px" fontSize={isLargerThan960 ? "60px" : "42px"}>
+                  <FontAwesomeIcon
+                    icon={faEnvelopeSquare}
+                    height={"75px"}
+                    style={{ marginRight: "45px" }}
+                  />
+                  <Text>Email: dfelsenthal88@gmail.com</Text>
+                </Flex>
+              </ListItem>
+              <ListItem>
+                <Flex mb="25px" fontSize={isLargerThan960 ? "60px" : "42px"}>
+                  <FontAwesomeIcon
+                    icon={faGithubSquare}
+                    height={"75px"}
+                    style={{ marginRight: "45px" }}
+                  />
+                  <Text color={"white"}>
+                    Github:{" "}
+                    <a color="white" href="https://github.com/dfelsie">
+                      Click here
+                    </a>
+                  </Text>
+                </Flex>
+              </ListItem>
+            </List>
           </Center>
         </>
       );

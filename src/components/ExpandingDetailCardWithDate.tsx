@@ -37,6 +37,7 @@ export default function ExpandingDetailCardWithDate({
       border="3px solid white"
       my={"25px"}
       borderRadius={"20px"}
+      onClick={() => setVisible(!visible)}
     >
       <Flex justifyContent={"space-between"}>
         <Text ml={"4px"}>{date}:</Text>

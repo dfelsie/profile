@@ -22,7 +22,7 @@ import SectionBody from "../components/SectionBody";
 import TitleCard from "../components/TitleCard";
 import Head from "next/head";
 
-const sectionNames = ["About", "Skills", "Experience", "Contact"];
+const sectionNames = ["About", "Skills", "Experience", "Projects", "Contact"];
 
 const Index = () => (
   <>
@@ -54,7 +54,11 @@ const Index = () => (
       <TitleCard />
       <Flex flexGrow={9} flexDir={"column"} color="text" h={"90%"} w={"100%"}>
         {sectionNames.map((name, index) => (
-          <MySection isBlack={index % 2 == 0} title={name}>
+          <MySection
+            isBlack={index % 2 == 0}
+            title={name}
+            key={`mySectionnumber${index}`}
+          >
             <SectionBody
               isBlack={index % 2 == 0}
               sectionTitle={name}

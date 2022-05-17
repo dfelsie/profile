@@ -23,6 +23,7 @@ export default function MySection({ isBlack, title, children }: Props) {
     <Box
       h={isLargerThan960 ? "850px" : "1050px"}
       bg={isBlack ? "black" : "white"}
+      overflow="hidden"
     >
       <Center flexDir={"column"} h={"100%"}>
         <ArrowDownIcon
@@ -32,6 +33,7 @@ export default function MySection({ isBlack, title, children }: Props) {
         />
         <Heading
           mt={"-50px"}
+          mb={"20px"}
           fontSize={"8vw"}
           color={!isBlack ? "black" : "white"}
         >
