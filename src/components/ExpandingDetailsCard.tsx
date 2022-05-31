@@ -1,6 +1,6 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import React, { useState } from "react";
 import FramerChakraRotatingChevron from "./FramerChakraRotatingChevron";
 
@@ -18,14 +18,18 @@ export default function ExpandingDetailCard({
   const [isLargerThan960] = useMediaQuery("(min-width: 960px)");
 
   const [visible, setVisible] = useState(false);
-  const variants = {
+  const variants: Variants = {
     visible: {
       height: isLargerThan960 ? "100px" : "200px",
       opacity: 1,
     },
     hidden: {
       height: "0",
-      opacity: 0,
+      opacity: [0, 0],
+      transition: {
+        duration: 0.5,
+        times: [0, 0.5],
+      },
     },
   };
 

@@ -22,6 +22,7 @@ export default function TitleCard({}: Props) {
       borderRadius={"50px"}
       px={isLargerThan960 ? "5%" : "5px"}
       mb={"15px"}
+      mx={"15px"}
     >
       <Center height={"50%"} mt="75px" justifyContent={"space-between"}>
         <Image
