@@ -24,7 +24,7 @@ export default function TitleCard({}: Props) {
       mb={"15px"}
       mx={"15px"}
     >
-      <Center height={"50%"} mt="75px" justifyContent={"space-between"}>
+      <Center height={"50%"} mt="75px" justifyContent={"space-around"}>
         <Image
           src="/headshot.jpg"
           height="180px"
