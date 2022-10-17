@@ -194,7 +194,7 @@ export default function SectionBody({ sectionTitle, isBlack }: Props) {
                   </Text>
                 </ExpandingDetailCard>
               </ListItem>
-              <ListItem>
+              <ListItem mb={"75px"}>
                 <ExpandingDetailCard title="Profile">
                   <Text>
                     The profile you're currently viewing.
