@@ -40,7 +40,7 @@ export default function ExpandingDetailCardWithDate({
       onClick={() => setVisible(!visible)}
     >
       <Flex justifyContent={"space-between"}>
-        <Text ml={"4px"}>{date}:</Text>
+        <Text ml={"8px"}>{date}:</Text>
         <Text>{title}</Text>
         <FramerChakraRotatingChevron
           visible={visible}
